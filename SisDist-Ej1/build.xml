@@ -1,0 +1,16 @@
+<project name="SisDist-Ej1">
+	<target name="init">
+		<mkdir dir="classes" />
+		<mkdir dir="build" />
+		<mkdir dir="docs" />
+	</target>
+	<target name="compile" depends="init">
+		<javac srcdir="src" destdir="classes" includeantruntime="false"/>
+	</target>	
+	<target name="build" depends="compile">
+		<jar destfile="build/SisDistEj1.jar" basedir="classes" />
+	</target>
+	<target name="doc" depends="init">
+		<javadoc sourcepath="src" destdir="docs" />
+	</target>
+</project>
